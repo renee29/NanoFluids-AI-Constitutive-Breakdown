@@ -1,0 +1,33 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor and temporary files
+*.swp
+*.swo
+*.tmp
+*.log
+*.bak
+*.orig
+*~
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Project-internal artifacts (do not publish)
+PROMPT.md
+TECHNICAL_ANALYSIS.txt
+multiphysics_metadata.txt
+multiphysics_metadata.json

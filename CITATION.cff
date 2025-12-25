@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "NanoFluids-AI: Continuum Validation Suite"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - name: "NanoFluids-AI Research Team"
+abstract: "Molecular dynamics suite for validating the hydrodynamic limit in nanoconfined fluids."
+version: 1.0.0
+license: MIT
