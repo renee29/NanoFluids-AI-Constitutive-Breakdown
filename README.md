@@ -45,7 +45,7 @@ The failure manifests through:
 This motivates the non-local constitutive relation:
 
 $$
-\tau_{xy}(y) = \int_0^H K(y, y') \cdot \frac{\partial u_x}{\partial y'}(y') \, dy'
+\tau_{xy}(y) = \int_0^H K(y, y') \cdot \frac{\partial u_x}{\partial y'}(y') \ dy'
 $$
 
 where $K(y, y')$ is a non-local kernel encoding spatial correlations and memory effects.
@@ -91,13 +91,15 @@ $$
 $$
 
 **Kinetic contribution:**
+
 $$
-\tau_{\alpha\beta}^{(K)}(\mathbf{r}) = \sum_i m_i v_{i\alpha} v_{i\beta} \, \delta(\mathbf{r} - \mathbf{r}_i)
+\tau_{\alpha\beta}^{(K)}(\mathbf{r}) = \sum_i m_i v_{i\alpha} v_{i\beta} \ \delta(\mathbf{r} - \mathbf{r}_i)
 $$
 
 **Configurational contribution:**
+
 $$
-\tau_{\alpha\beta}^{(C)}(\mathbf{r}) = \frac{1}{2} \sum_{i \neq j} r_{ij,\alpha} F_{ij,\beta} \int_0^1 \delta(\mathbf{r} - \mathbf{r}_i + \lambda \mathbf{r}_{ij}) \, d\lambda
+\tau_{\alpha\beta}^{(C)}(\mathbf{r}) = \frac{1}{2} \sum_{i \neq j} r_{ij,\alpha} \ F_{ij,\beta} \int_0^1 \delta(\mathbf{r} - \mathbf{r}_i + \lambda \mathbf{r}_{ij}) \ d\lambda
 $$
 
 The key feature is the **bond-line integral**: the virial contribution is distributed proportionally along the interparticle bond vector, ensuring local momentum conservation across any plane.
@@ -108,14 +110,14 @@ $$
 \tau_{xy}^{(k)} = \sum_{i < j} \left( -r_{ij,y} \cdot F_{ij,x} \right) \cdot \frac{\Delta y_k \cap [y_i, y_j]}{|y_i - y_j|}
 $$
 
-where $\Delta y_k$ is the $k$-th spatial bin. This ensures local momentum conservation across bin boundaries.
+where $\Delta y_k$ is the $k$-th spatial bin. This ensures conservation of local momentum across bin boundaries.
 
 ### 2.2.1 Layer-Resolved Green-Kubo Viscosity
 
 For each spatial layer $k$, the local viscosity is computed via the **Green-Kubo relation**:
 
 $$
-\eta_k = \frac{V_k}{k_B T} \int_0^\infty \langle \tau_{xy}^{(k)}(0) \cdot \tau_{xy}^{(k)}(t) \rangle \, dt
+\eta_k = \frac{V_k}{k_B T} \int_0^\infty \langle \tau_{xy}^{(k)}(0) \cdot \tau_{xy}^{(k)}(t) \rangle \ dt
 $$
 
 where:
@@ -196,7 +198,7 @@ The simulation implements a canonical **Lennard-Jones (LJ) fluid** confined in a
 | Component | Implementation |
 |:----------|:---------------|
 | **Potential** | Truncated LJ ($r_c = 2.5\sigma$) + WCA walls |
-| **Integrator** | Velocity-Verlet (symplectic, $\mathcal{O}(\Delta t^2)$) |
+| **Integrator** | Velocity-Verlet (symplectic, O(Δt²)) |
 | **Thermostat** | Spatially-selective Langevin (walls only) |
 | **Ensemble** | NVE in bulk, NVT at boundaries |
 
@@ -227,16 +229,25 @@ The spatially-selective thermostat is critical: it acts as a heat sink at the wa
 
 ### 3.3 Diagnostic Tests
 
-**Energy Conservation (NVE):**
+To ensure the robustness of the simulation, we perform rigorous diagnostic tests.
 
 <p align="center">
-  <img src="diagnostic_energy_conservation_nve.png" alt="Energy Conservation Test" width="48%">
-  <img src="diagnostic_thermostat_spatial_profile.png" alt="Thermostat Profile" width="48%">
+  <img src="diagnostic_energy_conservation_nve.png" alt="Energy Conservation Test" width="100%">
 </p>
 
-> **Figure 1: Conservation and thermostat diagnostics.**
-> - **Left:** Hamiltonian drift satisfies $|E(t) - E_0|/|E_0| < 10^{-4}$ over $10^5$ steps, confirming symplectic stability.
-> - **Right:** Spatial profile of friction coefficients. Note the sharp localisation of $\gamma_x$ (blue) at walls to enforce no-slip, while the bulk remains friction-free.
+> **Figure 3a: Energy Conservation (NVE).**
+> *   **Top Panel:** Evolution of the Total Energy ($E_{tot}$) over $10^5$ time steps.
+> *   **Bottom Panel:** Relative error analysis. The Hamiltonian drift satisfies $|E(t) - E_0|/|E_0| < 10^{-4}$, confirming the symplectic stability of the Velocity-Verlet integrator.
+
+<br>
+
+<p align="center">
+  <img src="diagnostic_thermostat_spatial_profile.png" alt="Thermostat Profile" width="100%">
+</p>
+
+> **Figure 3b: Thermostat Topology.**
+> *   **Panel A (X-Direction):** Shows the sharp localisation of friction ($\gamma_x$, blue) strictly at the walls to enforce no-slip boundary conditions. Crucially, the bulk remains friction-free ($\gamma_x=0$) to preserve momentum conservation.
+> *   **Panel B (Y-Direction):** Displays the uniform weak coupling ($\gamma_y$, green) applied across the domain solely for temperature regulation.
 
 ---
 
@@ -536,7 +547,7 @@ python visualize_multiphysics_publication.py
 
 ```bibtex
 @software{nanofluids_ai_constitutive_breakdown_2025,
-  author       = {Fábregas, René and NanoFluids-AI Team},
+  author       = {Fabregas, R.},
   title        = {NanoFluids-AI: Constitutive Breakdown Validation Suite},
   year         = {2025},
   publisher    = {Zenodo},
