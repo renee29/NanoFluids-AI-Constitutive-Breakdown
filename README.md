@@ -571,4 +571,4 @@ For questions or collaboration inquiries, please open a GitHub issue or contact:
 
 ---
 
-**Project Status:** Initial release (v1.0.0) — January 2025
+**Project Status:** Initial release (v1.0.0) — January 2026
