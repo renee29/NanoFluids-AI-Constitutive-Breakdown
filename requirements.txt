@@ -1,3 +1,7 @@
-numpy
-matplotlib
-numba
+# NanoFluids-AI: Constitutive Breakdown Validation Suite
+# Core dependencies for molecular dynamics simulations
+
+numpy>=1.21
+matplotlib>=3.5
+numba>=0.56
+scipy>=1.9

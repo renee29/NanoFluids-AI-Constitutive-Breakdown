@@ -1,9 +1,23 @@
 cff-version: 1.2.0
-title: "NanoFluids-AI: Continuum Validation Suite"
+title: "NanoFluids-AI: Constitutive Breakdown Validation Suite"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - name: "NanoFluids-AI Research Team"
-abstract: "Molecular dynamics suite for validating the hydrodynamic limit in nanoconfined fluids."
-version: 1.0.0
+  - given-names: René
+    family-names: Fábregas
+    email: rfabregas@ugr.es
+    affiliation: Universidad de Granada
+  - name: "NanoFluids-AI Team"
+abstract: "Molecular dynamics suite for validating the hydrodynamic limit and demonstrating the breakdown of local constitutive laws under nanoconfinement."
+keywords:
+  - molecular dynamics
+  - non-local operators
+  - Irving-Kirkwood
+  - nanofluidics
+  - constitutive laws
+  - Green-Kubo
+version: "1.0.0"
+date-released: 2025-01-02
 license: MIT
+repository-code: "https://github.com/NanoFluids-AI/constitutive-breakdown"
+doi: "10.5281/zenodo.XXXXXXX"

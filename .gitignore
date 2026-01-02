@@ -6,6 +6,11 @@ env/
 # Python cache and bytecode
 __pycache__/
 *.py[cod]
+*.egg-info/
+
+# Build artifacts
+dist/
+build/
 
 # OS files
 .DS_Store
@@ -19,6 +24,10 @@ Thumbs.db
 *.bak
 *.orig
 *~
+
+# IDE configurations
+.idea/
+.vscode/
 
 # Tool caches
 .pytest_cache/
