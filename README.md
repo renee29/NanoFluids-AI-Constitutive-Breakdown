@@ -1,11 +1,11 @@
-# NanoFluids-AI: Constitutive Breakdown Validation Suite
+# ICON₁₀: Constitutive Breakdown Validation Suite
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-green.svg)
 ![Status: Validated](https://img.shields.io/badge/Status-Validated-brightgreen.svg)
 ![Math: Non-Local Operators](https://img.shields.io/badge/Math-Non--Local_Operators-purple.svg)
 ![Physics: Molecular Dynamics](https://img.shields.io/badge/Physics-Molecular_Dynamics-orange.svg)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18135069.svg)](https://doi.org/10.5281/zenodo.18135069)
 
 ---
 
@@ -548,12 +548,12 @@ python visualize_multiphysics_publication.py
 ```bibtex
 @software{nanofluids_ai_constitutive_breakdown_2025,
   author       = {Fabregas, R.},
-  title        = {NanoFluids-AI: Constitutive Breakdown Validation Suite},
+  title        = {ICON₁₀: Constitutive Breakdown Validation Suite},
   year         = {2025},
   publisher    = {Zenodo},
   version      = {v1.0.0},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://github.com/NanoFluids-AI/constitutive-breakdown}
+  doi          = {10.5281/zenodo.18135069},
+  url          = {https://doi.org/10.5281/zenodo.18135069}
 }
 ```
 
